@@ -1,0 +1,221 @@
+.hideDesktopEmployee {
+  display: none;
+  text-decoration: none;
+  color: black;
+}
+
+div.containerFormEmployee {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+h2.tabTitleEmployee {
+  text-align: left;
+  margin-left: 15px;
+  margin-block: 40px;
+}
+
+form.visibleFormNewEmployee {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 15px;
+}
+
+form.hiddenFormNewEmployee {
+  display: none;
+}
+
+.lineEmployee {
+  grid-column: 1/3;
+  display: flex;
+  gap: inherit;
+}
+.fieldNameEmployee {
+  flex-basis: calc(60% + 19px);
+}
+
+.fieldEmailEmployee {
+  flex-basis: calc(40% - 19px);
+}
+
+.fieldDateEmployee {
+  flex-basis: 20%;
+  flex-grow: 0.5;
+  flex-shrink: 2;
+}
+
+.fieldPhone {
+  flex-basis: 35%;
+}
+
+.fieldCpf {
+  flex-basis: 40%;
+}
+
+/* line3 */
+.fieldAddress {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 60%;
+}
+.fieldAddressNumber {
+  flex-grow: 0;
+  flex-shrink: 2;
+  flex-basis: 20%;
+}
+
+/* line 4 e 5 */
+.fieldDistrict {
+  flex-basis: 25%;
+}
+
+#formNewEmployee .line4 {
+  justify-content: end !important;
+}
+
+.selectCityEmployee, .selectRoleEmployee {
+  padding-inline: 15px;
+  padding-block: 17px;
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid var(--primary-dark);
+  outline: 0;
+  height: 60px;
+
+  /* Text */
+  color: var(--text-100);
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  text-align: left;
+  cursor: pointer;
+}
+
+/* select:invalid {
+    color: var(--text-40);
+} */
+
+.selectCity,
+.selectRoleEmployee {
+  -webkit-appearance: none; /* Remove a aparência padrão no Chrome/Safari */
+  -moz-appearance: none; /* Remove a aparência padrão no Firefox */
+  appearance: none; /* Remove a aparência padrão */
+  background: url(../../assets/icons/selectArrow.svg) no-repeat right center;
+  background-position: calc(100% - 1rem);
+  background-size: 2rem;
+}
+
+.divSelectCityEmployee {
+  flex-basis: 25%;
+}
+.fieldCepEmployee {
+  flex-basis: 50%;
+}
+
+.divSelectRoleEmployee {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 25%;
+}
+.line5Employee {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.roleAndStatusEmployee {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  gap: 2rem;
+}
+.divButtonsEmployee {
+  grid-column: 3/5;
+  display: flex;
+  justify-content: end;
+  gap: 1em;
+}
+
+#labelNewEmployeeStatus {
+  flex-basis: 35%;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  align-items: start;
+}
+#labelNewEmployeeStatus span {
+  margin: 0px;
+  margin-bottom: 2px;
+}
+
+.isInvalidEmployee {
+  border-color: var(--system-danger);
+  background-color: #fff2f2;
+}
+
+/* ------------- PLACEHODER COLOR ------------- */
+
+::-webkit-input-placeholder {
+  color: var(--text-40);
+}
+:-moz-placeholder {
+  color: var(--text-40);
+}
+
+::-moz-placeholder {
+  color: var(--text-40);
+}
+
+:-ms-input-placeholder {
+  color: var(--text-40);
+}
+
+@media (max-width: 768px) {
+  .hideDesktopEmployee {
+    display: block;
+    margin-left: 0.05em;
+  }
+  div.containerFormEmployee {
+    width: 98%;
+    margin: 0 auto;
+  }
+  h2.tabTitleEmployee {
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  form.visibleFormNewEmployee {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form.hiddenFormNewEmployee {
+    display: none;
+    flex-direction: column;
+  }
+
+  .fieldAddressEmployee {
+    grid-column: 1/3;
+  }
+
+  .divButtonsEmployee {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 0;
+  }
+
+  .lineEmployee {
+    grid-column: 1/3;
+    display: flex;
+    gap: inherit;
+    flex-direction: column;
+  }
+}
