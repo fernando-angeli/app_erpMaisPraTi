@@ -22,8 +22,8 @@ FROM nginx:alpine
 # Copiar os arquivos de build do React para o diretório do Nginx
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Expor a porta 80 para acessar a aplicação
-EXPOSE 80
+# Expor a porta 3000 para acessar a aplicação
+EXPOSE 3000
 
 # Iniciar o Nginx (não é necessário definir um CMD, pois o Nginx inicia por padrão)
 CMD ["nginx", "-g", "daemon off;"]
